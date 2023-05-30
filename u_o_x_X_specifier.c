@@ -1,6 +1,6 @@
 #include "main.h"
 
-/****** PRINT POINTER ******/
+/****************** PRINT POINTER ******************/
 /**
  * print_pointer - Prints the value of a pointer variable
  * @types: List a of arguments
@@ -52,7 +52,7 @@ int print_pointer(va_list types, char buffer[],
 		width, flags, padd, extra_c, padd_start));
 }
 
-/********* PRINT NON PRINTABLE *********/
+/************************* PRINT NON PRINTABLE *************************/
 /**
  * print_non_printable - Prints ascii codes in hexa of non printable chars
  * @types: Lista of arguments
@@ -92,7 +92,7 @@ int print_non_printable(va_list types, char buffer[],
 	return (write(1, buffer, i + offset));
 }
 
-/********* PRINT REVERSE *********/
+/************************* PRINT REVERSE *************************/
 /**
  * print_reverse - Prints reverse string.
  * @types: Lista of arguments
@@ -128,14 +128,14 @@ int print_reverse(va_list types, char buffer[],
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[k];
+		char z = str[i];
 
 		write(1, &z, 1);
 		count++;
 	}
 	return (count);
 }
-/********* PRINT A STRING IN ROT13 *********/
+/************************* PRINT A STRING IN ROT13 *************************/
 /**
  * print_rot13string - Print a string in rot13.
  * @types: Lista of arguments
@@ -165,7 +165,11 @@ int print_rot13string(va_list types, char buffer[],
 
 	if (str == NULL)
 		str = "(AHYY)";
+<<<<<<< HEAD
 	for (k = 0; str[i]; i++)
+=======
+	for (i = 0; str[i]; i++)
+>>>>>>> a90e6b98cc6e10cf66778c30b2810844a4e5c492
 	{
 		for (j = 0; in[j]; j++)
 		{
